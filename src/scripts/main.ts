@@ -3,6 +3,12 @@
  * Navigation, Header, Mobile Menu, Scroll Animations, Form Validation
  */
 
+// Import styles
+import '../styles/base.css';
+import '../styles/components.css';
+import '../styles/sections.css';
+import '../styles/responsive.css';
+
 // ═══════════════════════════════════════════════════════════════════════════
 // HEADER & NAVIGATION
 // ═══════════════════════════════════════════════════════════════════════════
@@ -11,7 +17,6 @@ const header = document.getElementById('header');
 const burger = document.querySelector('.burger');
 const mobileMenu = document.getElementById('mobileMenu');
 const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-const navLinks = document.querySelectorAll('.nav-link');
 
 // Sticky header on scroll
 function handleHeaderScroll() {
