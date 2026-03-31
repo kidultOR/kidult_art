@@ -1,0 +1,297 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESPONSIVE — Media queries and breakpoints
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Breakpoints ── */
+/* Mobile first, then min-width for larger screens */
+
+/* Tablet: 768px+ */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--space-xl);
+  }
+
+  /* Header */
+  .header-nav {
+    gap: var(--space-xl);
+  }
+
+  /* About */
+  .about-grid {
+    gap: var(--space-2xl);
+  }
+
+  /* Services */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Cases */
+  .case-card {
+    gap: var(--space-xl);
+  }
+
+  /* Contact */
+  .contact-grid {
+    gap: var(--space-xl);
+  }
+
+  /* Clients */
+  .clients-logos {
+    gap: var(--space-xl);
+  }
+
+  .client-logo-wrapper {
+    width: 140px;
+    height: 70px;
+  }
+}
+
+/* Laptop: 1024px+ */
+@media (min-width: 1024px) {
+  /* Services */
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Cases */
+  .case-card {
+    gap: var(--space-2xl);
+  }
+
+  .case-title {
+    font-size: 2rem;
+  }
+
+  /* Tech */
+  .tech-groups {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .tech-group {
+    flex: 1;
+  }
+
+  /* Demo */
+  .demo-canvas-wrapper {
+    width: 70%;
+  }
+}
+
+/* Desktop: 1440px+ */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1280px;
+  }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 7fr 5fr;
+  }
+
+  /* Cases */
+  .case-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: 7fr 5fr;
+  }
+
+  /* Demo */
+  .demo-canvas-wrapper {
+    width: 60%;
+  }
+}
+
+/* Large Desktop: 1920px+ */
+@media (min-width: 1920px) {
+  :root {
+    --space-3xl: 10rem;
+    --space-4xl: 12rem;
+  }
+
+  .container {
+    max-width: 1600px;
+  }
+}
+
+/* ── Mobile: below 768px ── */
+@media (max-width: 767px) {
+  /* Header */
+  .header {
+    height: 56px;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Cases */
+  .case-card {
+    grid-template-columns: 1fr;
+    direction: ltr !important;
+  }
+
+  .case-card:nth-child(even) {
+    direction: ltr !important;
+  }
+
+  .case-card > * {
+    direction: ltr;
+  }
+
+  .case-image {
+    order: -1;
+  }
+
+  /* Tech */
+  .tech-groups {
+    gap: var(--space-lg);
+  }
+
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+  }
+
+  /* Clients */
+  .clients-logos {
+    gap: var(--space-md);
+  }
+
+  .client-logo-wrapper {
+    width: 100px;
+    height: 50px;
+  }
+
+  /* Demo */
+  .demo-canvas-wrapper {
+    width: 100%;
+  }
+
+  .demo-controls {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+/* ── Small Mobile: 320px - 375px ── */
+@media (max-width: 375px) {
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.875rem;
+  }
+
+  .card {
+    padding: var(--space-md);
+  }
+
+  .service-card {
+    padding: var(--space-md);
+  }
+}
+
+/* ── Tablet Portrait: 768px - 1023px ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card-stat {
+    flex: 1;
+    min-width: 200px;
+  }
+}
+
+/* ── Tablet Landscape: 1024px - 1439px ── */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .container {
+    max-width: 100%;
+    padding: 0 var(--space-xl);
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+/* ── Print Styles ── */
+@media print {
+  .header,
+  .hero-canvas,
+  .scroll-indicator,
+  .demo-container,
+  .burger,
+  .mobile-menu {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .card,
+  .service-card {
+    break-inside: avoid;
+  }
+}

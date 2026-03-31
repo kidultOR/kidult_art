@@ -4,15 +4,544 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>kidult.art — Интерактивные 3D-продукты и прототипы</title>
-  <meta name="description" content="Студия kidult.art: прототипирование и разработка интерактивных 3D-продуктов.">
+  <meta name="description" content="Студия kidult.art: прототипирование и разработка интерактивных 3D-продуктов. От идеи до работающего прототипа за 2–4 недели. 20 лет опыта в геймдеве и 3D.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="kidult.art — Интерактивные 3D-продукты">
+  <meta property="og:description" content="Прототипирование и разработка интерактивных 3D-продуктов. Арт + Код. 20 лет опыта.">
+  <meta property="og:image" content="/images/og-image.png">
+  <meta property="og:url" content="https://kidult.art">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Preload fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "kidult.art",
+    "url": "https://kidult.art",
+    "description": "Студия прототипирования и разработки интерактивных 3D-продуктов",
+    "founder": { "@type": "Person", "name": "Alek R" }
+  }
+  </script>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="./src/styles/base.css">
+  <link rel="stylesheet" href="./src/styles/components.css">
+  <link rel="stylesheet" href="./src/styles/sections.css">
+  <link rel="stylesheet" href="./src/styles/responsive.css">
+
+  <link rel="canonical" href="https://kidult.art/">
 </head>
 <body>
-  <main class="container">
-    <h1>kidult.art</h1>
-    <p class="subtitle">От идеи до работающего 3D-прототипа за 2–4 недели</p>
-    <p class="description">Прототипирование и разработка интерактивных 3D-продуктов. Арт + Код. 20 лет опыта.</p>
+  <!-- Skip Link -->
+  <a href="#main" class="btn-ghost" style="position: absolute; left: -9999px; top: 0;" tabindex="0">Перейти к содержимому</a>
+
+  <!-- ═══ HEADER ═══ -->
+  <header id="header" class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="header-logo">kidult.art</a>
+        
+        <nav class="header-nav" role="navigation" aria-label="Основная навигация">
+          <div class="header-nav-links">
+            <a href="#about" class="nav-link">О студии</a>
+            <a href="#services" class="nav-link">Услуги</a>
+            <a href="#cases" class="nav-link">Кейсы</a>
+            <a href="#demo" class="nav-link">Демо</a>
+            <a href="#contact" class="nav-link">Контакты</a>
+          </div>
+          <a href="#contact" class="btn btn-primary header-cta">Обсудить проект</a>
+        </nav>
+
+        <button class="burger" aria-label="Меню" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="nav-link mobile-nav-link">О студии</a>
+    <a href="#services" class="nav-link mobile-nav-link">Услуги</a>
+    <a href="#cases" class="nav-link mobile-nav-link">Кейсы</a>
+    <a href="#demo" class="nav-link mobile-nav-link">Демо</a>
+    <a href="#contact" class="nav-link mobile-nav-link">Контакты</a>
+  </div>
+
+  <main id="main">
+    <!-- ═══ SECTION 1: HERO ═══ -->
+    <section id="hero" class="hero">
+      <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      
+      <div class="hero-content">
+        <span class="hero-overline">СТУДИЯ ИНТЕРАКТИВНОГО 3D</span>
+        <h1 class="hero-title">kidult.art</h1>
+        <p class="hero-subtitle">От идеи до работающего 3D-прототипа за 2–4 недели</p>
+        <p class="hero-description">Прототипирование и разработка интерактивных 3D-продуктов. Арт + Код. 20 лет опыта.</p>
+        
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">
+            Обсудить проект
+            <span class="btn-arrow">→</span>
+          </a>
+          <a href="#cases" class="btn btn-ghost">
+            Смотреть кейсы
+            <span class="btn-arrow">↓</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION 2: ABOUT ═══ -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content">
+            <span class="overline">О СТУДИИ</span>
+            <h2>Где встречаются арт и код</h2>
+            
+            <div class="about-text">
+              <p>kidult.art — студия, которая одинаково хорошо делает арт и код. Мы создаём интерактивные 3D-продукты полного цикла: от моделирования и анимации до работающего прототипа в Unity или браузере.</p>
+              
+              <p>За 20 лет мы прошли путь от 3D-моделирования для крупнейших геймдев-студий (Wargaming, 1C Game Studios) до разработки собственных интерактивных WebGL-продуктов.</p>
+              
+              <blockquote class="about-quote">
+                Наша суперсила — редкое сочетание художественного и технического мышления. Это значит: один подрядчик вместо двух, быстрое прототипирование и результат за 2–4 недели.
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="about-stats">
+            <div class="card-stat">
+              <div class="card-stat-number" data-count="20">0</div>
+              <div class="card-stat-label">лет опыта</div>
+            </div>
+            <div class="card-stat">
+              <div class="card-stat-number" data-count="50">0</div>
+              <div class="card-stat-label">проектов</div>
+            </div>
+            <div class="card-stat">
+              <div class="card-stat-number" style="font-size: 1.5rem;">Полный цикл</div>
+              <div class="card-stat-label">от идеи до продукта</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION 3: SERVICES ═══ -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-overline">УСЛУГИ</span>
+          <h2 class="section-title">Что мы делаем</h2>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-icon">🎮</div>
+            <h3 class="service-title">3D-моделирование</h3>
+            <p class="service-description">Персонажи, окружение, пропсы для игр и реалтайма</p>
+            <span class="service-tag">Арт</span>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-icon">🦴</div>
+            <h3 class="service-title">Риг и анимация</h3>
+            <p class="service-description">Скелетная анимация персонажей, facial rig, motion</p>
+            <span class="service-tag">Арт</span>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-icon">⚡</div>
+            <h3 class="service-title">Оптимизация 3D</h3>
+            <p class="service-description">LOD, ретопология, атласы, бюджеты полигонов для RT</p>
+            <span class="service-tag">Тех. арт</span>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div class="service-icon">🔧</div>
+            <h3 class="service-title">Технический арт</h3>
+            <p class="service-description">Шейдеры, процедурная генерация, пайплайн Unity/UE</p>
+            <span class="service-tag">Тех. арт</span>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card">
+            <div class="service-icon">📦</div>
+            <h3 class="service-title">Экспорт-пайплайн</h3>
+            <p class="service-description">FBX, GLB, USD — автоматизация экспорта из DCC</p>
+            <span class="service-tag">Pipeline</span>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card">
+            <div class="service-icon">🎯</div>
+            <h3 class="service-title">Геймплей-прототипы</h3>
+            <p class="service-description">Быстрые прототипы механик на Unity (C#)</p>
+            <span class="service-tag">Код</span>
+          </div>
+
+          <!-- Service 7 -->
+          <div class="service-card">
+            <div class="service-icon">🌐</div>
+            <h3 class="service-title">WebGL / three.js</h3>
+            <p class="service-description">Интерактивный 3D-контент прямо в браузере</p>
+            <span class="service-tag">Код</span>
+          </div>
+
+          <!-- Service 8 -->
+          <div class="service-card">
+            <div class="service-icon">🖥️</div>
+            <h3 class="service-title">Интерактивные веб-демо</h3>
+            <p class="service-description">Конфигураторы, визуализации, интерактивные презентации</p>
+            <span class="service-tag">Код</span>
+          </div>
+
+          <!-- Service 9 -->
+          <div class="service-card">
+            <div class="service-icon">🎲</div>
+            <h3 class="service-title">Мини-игры</h3>
+            <p class="service-description">Браузерные и мобильные игры, HTML5 games</p>
+            <span class="service-tag">Код</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION 4: CASES ═══ -->
+    <section id="cases" class="cases">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-overline">ПОРТФОЛИО</span>
+          <h2 class="section-title">Избранные проекты</h2>
+        </div>
+
+        <div class="cases-list">
+          <!-- Case 1: IL-2 Sturmovik -->
+          <div class="case-card">
+            <div class="case-image">
+              <img src="/images/cases/il2-sturmovik.svg" alt="IL-2 Sturmovik — боевые самолёты" loading="lazy">
+            </div>
+            <div class="case-content">
+              <h3 class="case-title">IL-2 Sturmovik</h3>
+              <div class="case-client">1C Game Studios</div>
+              <div class="case-role">3D Artist, Tech Art</div>
+              <p class="case-description">Боевые самолёты и окружение для авиасимулятора мирового уровня</p>
+              <div class="case-tech">
+                <span class="badge">3ds Max</span>
+                <span class="badge">Substance</span>
+                <span class="badge">Unreal</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 2: World of Tanks -->
+          <div class="case-card">
+            <div class="case-image">
+              <img src="/images/cases/world-of-tanks.svg" alt="World of Tanks — техника" loading="lazy">
+            </div>
+            <div class="case-content">
+              <h3 class="case-title">World of Tanks</h3>
+              <div class="case-client">Wargaming</div>
+              <div class="case-role">3D Artist</div>
+              <p class="case-description">Моделирование и текстурирование техники для флагманского MMO</p>
+              <div class="case-tech">
+                <span class="badge">Maya</span>
+                <span class="badge">ZBrush</span>
+                <span class="badge">Photoshop</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 3: Caliber -->
+          <div class="case-card">
+            <div class="case-image">
+              <img src="/images/cases/caliber.svg" alt="Caliber — персонажи" loading="lazy">
+            </div>
+            <div class="case-content">
+              <h3 class="case-title">Caliber</h3>
+              <div class="case-client">1C Online Games</div>
+              <div class="case-role">Character Artist</div>
+              <p class="case-description">Персонажи и экипировка для тактического шутера</p>
+              <div class="case-tech">
+                <span class="badge">ZBrush</span>
+                <span class="badge">Marvelous</span>
+                <span class="badge">Marmoset</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 4: Alvegia Online -->
+          <div class="case-card">
+            <div class="case-image">
+              <img src="/images/cases/alvegia.svg" alt="Alvegia Online — MMORPG" loading="lazy">
+            </div>
+            <div class="case-content">
+              <h3 class="case-title">Alvegia Online</h3>
+              <div class="case-client">—</div>
+              <div class="case-role">Lead 3D / Game Dev</div>
+              <p class="case-description">Полный цикл создания 3D-контента для MMORPG</p>
+              <div class="case-tech">
+                <span class="badge">Blender</span>
+                <span class="badge">Unity</span>
+                <span class="badge">C#</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 5: ESG-проект -->
+          <div class="case-card">
+            <div class="case-image">
+              <img src="/images/cases/sber-esg.svg" alt="ESG-проект Сбербанка" loading="lazy">
+            </div>
+            <div class="case-content">
+              <h3 class="case-title">ESG-проект</h3>
+              <div class="case-client">Сбер</div>
+              <div class="case-role">3D + Interactive</div>
+              <p class="case-description">Интерактивная 3D-визуализация для корпоративного ESG-проекта</p>
+              <div class="case-tech">
+                <span class="badge">three.js</span>
+                <span class="badge">WebGL</span>
+                <span class="badge">GSAP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION 5: TECH STACK ═══ -->
+    <section id="tech" class="tech">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-overline">ТЕХНОЛОГИИ</span>
+          <h2 class="section-title">Наш стек</h2>
+        </div>
+
+        <div class="tech-groups">
+          <div class="tech-group">
+            <h3 class="tech-group-title">3D</h3>
+            <div class="tech-badges">
+              <span class="badge">Blender</span>
+              <span class="badge">Maya</span>
+              <span class="badge">Substance Painter</span>
+              <span class="badge">ZBrush</span>
+            </div>
+          </div>
+
+          <div class="tech-group">
+            <h3 class="tech-group-title">Разработка</h3>
+            <div class="tech-badges">
+              <span class="badge">Unity</span>
+              <span class="badge">C#</span>
+              <span class="badge">Python</span>
+              <span class="badge">three.js</span>
+              <span class="badge">WebGL</span>
+              <span class="badge">TypeScript</span>
+            </div>
+          </div>
+
+          <div class="tech-group">
+            <h3 class="tech-group-title">Форматы</h3>
+            <div class="tech-badges">
+              <span class="badge">FBX</span>
+              <span class="badge">GLB/glTF</span>
+              <span class="badge">USD</span>
+              <span class="badge">KTX2</span>
+              <span class="badge">Draco</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION 6: INTERACTIVE DEMO ═══ -->
+    <section id="demo" class="demo">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-overline">LIVE DEMO</span>
+          <h2 class="section-title">Попробуйте сами</h2>
+        </div>
+
+        <div class="demo-container">
+          <div class="demo-canvas-wrapper">
+            <canvas id="demo-canvas" class="demo-canvas" aria-label="Интерактивная 3D-сцена"></canvas>
+          </div>
+
+          <div class="demo-controls">
+            <button class="btn btn-secondary" id="demo-rotate">↻ Вращать</button>
+            <button class="btn btn-secondary" id="demo-zoom">🔍 Зум</button>
+            <button class="btn btn-secondary" id="demo-animate">▶ Анимация</button>
+            <button class="btn btn-secondary" id="demo-wireframe">🎨 Wireframe</button>
+          </div>
+
+          <p class="demo-caption">Интерактивный 3D — прямое доказательство нашей WebGL-экспертизы</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION 7: CLIENTS ═══ -->
+    <section id="clients" class="clients">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-overline">КЛИЕНТЫ</span>
+          <h2 class="section-title">Работали с лидерами индустрии</h2>
+        </div>
+
+        <div class="clients-logos">
+          <div class="client-logo-wrapper">
+            <img src="/images/logos/1cgs.svg" alt="1C Game Studios" class="client-logo" loading="lazy">
+          </div>
+          <div class="client-logo-wrapper">
+            <img src="/images/logos/wargaming.svg" alt="Wargaming" class="client-logo" loading="lazy">
+          </div>
+          <div class="client-logo-wrapper">
+            <img src="/images/logos/sber.svg" alt="Сбер" class="client-logo" loading="lazy">
+          </div>
+          <div class="client-logo-wrapper">
+            <img src="/images/logos/client-placeholder-1.svg" alt="Клиент" class="client-logo" loading="lazy">
+          </div>
+          <div class="client-logo-wrapper">
+            <img src="/images/logos/client-placeholder-2.svg" alt="Клиент" class="client-logo" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION 8: CONTACT ═══ -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-overline">КОНТАКТ</span>
+          <h2 class="section-title">Давайте обсудим ваш проект</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-form-wrapper">
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name" class="form-label">Имя *</label>
+                <input type="text" id="name" name="name" class="form-input" required>
+                <div class="form-error" id="name-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email *</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+                <div class="form-error" id="email-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="project" class="form-label">О проекте *</label>
+                <textarea id="project" name="project" class="form-textarea" required minlength="10"></textarea>
+                <div class="form-error" id="project-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="budget" class="form-label">Бюджет</label>
+                <select id="budget" name="budget" class="form-select">
+                  <option value="">Обсудим</option>
+                  <option value="under-100k">до 100К ₽</option>
+                  <option value="100k-300k">100–300К ₽</option>
+                  <option value="300k-1m">300К–1М ₽</option>
+                  <option value="over-1m">от 1М ₽</option>
+                </select>
+              </div>
+
+              <!-- Honeypot field -->
+              <input type="text" class="form-honeypot" name="honeypot" tabindex="-1" autocomplete="off">
+
+              <button type="submit" class="btn btn-primary">
+                Отправить заявку
+                <span class="btn-arrow">→</span>
+              </button>
+
+              <div class="form-success" id="form-success" style="display: none;">
+                Спасибо! Мы свяжемся с вами в течение 24 часов.
+              </div>
+            </form>
+          </div>
+
+          <div class="contact-info-wrapper">
+            <div class="contact-info">
+              <h3 class="contact-info-title">Контакты</h3>
+              
+              <a href="mailto:kidultor@gmail.com" class="contact-item">
+                <span class="contact-icon">📧</span>
+                <span>kidultor@gmail.com</span>
+              </a>
+
+              <a href="https://t.me/kidultart" target="_blank" rel="noopener" class="contact-item">
+                <span class="contact-icon">✈️</span>
+                <span>Telegram</span>
+              </a>
+
+              <a href="https://linkedin.com/in/kidultart" target="_blank" rel="noopener" class="contact-item">
+                <span class="contact-icon">💼</span>
+                <span>LinkedIn</span>
+              </a>
+
+              <a href="https://github.com/kidultart" target="_blank" rel="noopener" class="contact-item">
+                <span class="contact-icon">🐙</span>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-logo">kidult.art</div>
+          <p class="footer-tagline">Прототипирование и разработка интерактивных 3D-продуктов</p>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="social-links">
+            <a href="https://github.com/kidultart" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">🐙</a>
+            <a href="https://linkedin.com/in/kidultart" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">💼</a>
+            <a href="https://t.me/kidultart" target="_blank" rel="noopener" class="social-link" aria-label="Telegram">✈️</a>
+            <a href="mailto:kidultor@gmail.com" class="social-link" aria-label="Email">📧</a>
+          </div>
+          
+          <span class="footer-copyright">© 2026 kidult.art. Все права защищены.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script type="module" src="/src/scripts/main.ts"></script>
 </body>

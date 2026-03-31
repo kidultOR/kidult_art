@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="alvegia-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D9A6"/>
+      <stop offset="50%" style="stop-color:#6C5CE7"/>
+      <stop offset="100%" style="stop-color:#A29BFE"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#alvegia-gradient)"/>
+  <circle cx="400" cy="250" r="140" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="400" cy="250" r="95" fill="rgba(255,255,255,0.05)"/>
+  <text x="400" y="280" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="bold" opacity="0.9">ALVEGIA ONLINE</text>
+  <text x="400" y="320" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Arial, sans-serif" font-size="16">Lead 3D / Game Dev</text>
+  <!-- Abstract fantasy elements -->
+  <polygon points="400,150 430,200 370,200" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="400" cy="230" r="30" fill="rgba(255,255,255,0.15)"/>
+  <path d="M 320 300 Q 400 360 480 300" stroke="rgba(255,255,255,0.2)" stroke-width="3" fill="none"/>
+  <circle cx="340" cy="320" r="15" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="460" cy="320" r="15" fill="rgba(255,255,255,0.1)"/>
+</svg>
