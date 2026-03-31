@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/kidult_art/',
+  base: './',
   build: {
     outDir: 'dist',
     assetsInlineLimit: 4096,
